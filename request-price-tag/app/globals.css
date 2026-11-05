@@ -66,16 +66,27 @@
 }
 
 
+
+@theme inline {
+  /* Default Font */
+  --font-sans: var(--font-prompt-local);
+
+  /* Custom Fonts */
+  --font-prompt: var(--font-prompt-local);
+  --font-roboto: var(--font-roboto-local);
+}
+
+
 /* =========================================
    2. GLOBAL DEFAULT
    กำหนดค่าพื้นฐานของเว็บไซต์
 ========================================= */
 
-@layer base {
 
+@layer base {
   body {
     @apply bg-white text-black;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-prompt-local), sans-serif;
   }
 
   button,
@@ -88,8 +99,8 @@
   button {
     cursor: pointer;
   }
-
 }
+
 
 
 /* =========================================

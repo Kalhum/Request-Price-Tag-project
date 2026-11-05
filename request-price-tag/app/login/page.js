@@ -1,27 +1,34 @@
+"use client";
+
 import Image from "next/image";
 
 export default function LoginPage() {
+  //function clearForm
+  function clearForm() {
+    const form = document.querySelector("form");
+    form.reset();
+  }
+
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white">
       {/* Background Shapes */}
-      <div className="absolute -right-5 -top-28 z-0 h-[345px] w-[42%] rounded-b-[80px] rounded-bl-[180px] bg-gradient-to-br from-secondary via-secondary to-primary shadow-md max-md:h-[220px] max-md:w-[75%]" />
+      <div className="absolute -right-0 top-0 z-0 h-[358px] w-[56%] rounded-bl-[520px] rounded-br-[205px] bg-ball-gradient  shadow-md max-md:h-[220px] max-md:w-[75%]" />
 
-      <div className="absolute -bottom-36 -left-8 z-0 h-[330px] w-[52%] rounded-tl-[100px] rounded-tr-[180px] bg-gradient-to-br from-secondary via-secondary to-primary shadow-md max-md:h-[180px] max-md:w-[85%]" />
+      <div className="absolute bottom-0 left-0 z-0 h-[334px] w-[52%] rounded-tl-[205px] rounded-tr-[520px] bg-ball-gradient  shadow-md max-md:h-[180px] max-md:w-[85%]" />
 
       {/* Decorative Circles */}
-      <div className="absolute left-[1.5%] top-[6%] z-0 h-[135px] w-[135px] rounded-full bg-gradient-to-br from-secondary to-primary max-md:h-[75px] max-md:w-[75px]" />
+      <div className="absolute left-[5%] top-[5%] z-0 h-[270px] w-[270px] rounded-full bg-ball-gradient max-md:h-[75px] max-md:w-[75px]" />
 
-      <div className="absolute left-[24.5%] top-[22%] z-0 h-[45px] w-[45px] rounded-full bg-gradient-to-br from-secondary to-primary max-md:left-auto max-md:right-[8%]" />
 
-      <div className="absolute left-[33%] top-[42%] z-0 h-[45px] w-[45px] rounded-full bg-gradient-to-br from-secondary to-primary max-md:hidden" />
+      <div className="absolute left-[30%] top-[20%] z-0 h-[107px] w-[107px] rounded-full bg-ball-gradient  max-md:hidden" />
 
-      <div className="absolute right-[1.5%] top-[68%] z-0 h-[45px] w-[45px] rounded-full bg-gradient-to-br from-secondary to-primary max-md:hidden" />
+      <div className="absolute left-[44%] top-[40%] z-0 h-[107px] w-[107px] rounded-full bg-ball-gradient  max-md:hidden" />
 
-      <div className="absolute bottom-[6%] right-[10%] z-0 h-[68px] w-[68px] rounded-[50%_50%_0_50%] bg-gradient-to-br from-secondary to-primary max-md:h-[45px] max-md:w-[45px]" />
-
+      <div className="absolute right-[1.3%] top-[66.5%] z-0 h-[107px] w-[107px] rounded-full bg-ball-gradient max-md:hidden" />
       {/* Main Container */}
-      <div className="relative z-10 grid min-h-screen w-full max-w-[1440px] grid-cols-2 items-center px-[5%] max-md:grid-cols-1 max-md:gap-9 max-md:px-5 max-md:py-12">
+      <div className="relative z-10 pr-[9%] pl-[5%] grid min-h-screen w-full grid-cols-2 items-center max-md:grid-cols-1 max-md:gap-9 max-md:px-5 max-md:py-12">
         {/* Logo Section */}
+
         <section className="flex items-center justify-start max-md:justify-center">
           <div className="flex items-center gap-10">
             <div className="image-logo">
@@ -33,13 +40,15 @@ export default function LoginPage() {
                 priority
               />
             </div>
-            <div className="text-logo text-primary text-heading font-bold ">Requset Price Tag</div>
+            <div className="text-logo text-primary text-heading font-semibold">
+              Request Price Tag
+            </div>
           </div>
         </section>
 
         {/* Login Card */}
-        <section className="flex items-center justify-center">
-          <form className="card-default min-h-[750px] w-full max-w-[500px] px-[54px] py-9 max-md:min-h-[400px] max-md:max-w-[380px] max-md:px-[30px]">
+        <section className="flex items-center justify-end">
+          <form className=" relative card-default min-h-[750px] w-full max-w-[500px] px-[54px] py-9 max-md:min-h-[400px] max-md:max-w-[380px] max-md:px-[30px]">
             {/* Title */}
             <h1 className="mb-[26px] text-center text-heading font-semibold text-black">
               Login
@@ -87,22 +96,25 @@ export default function LoginPage() {
 
             {/* Forgot Password */}
             <div className="mb-[27px] flex justify-end">
-              <a
-                href="/forgot-password"
-                className="text-caption text-secondary hover:underline"
+              <button
+                onClick={clearForm}
+                className="text-body text-secondary underline "
               >
-                ลืมรหัสผ่าน?
-              </a>
+                เคลียร์ข้อมูลฟอร์ม
+              </button>
             </div>
 
             {/* Login Button */}
             <button
               type="submit"
-              path="/printing_request"
-              className="btn-primary w-full text-body font-medium active:scale-[0.98]"
+              className="btn-primary w-full  text-heading font-medium active:scale-[0.98]"
             >
               เข้าสู่ระบบ
             </button>
+
+            <div className="absolute bottom-[0] right-[0] z-0 h-[85px] w-[85px] rounded-[50%_50%_15%_50%] bg-ball-gradient from-secondary to-primary max-md:h-[45px] max-md:w-[45px]" />
+
+            <div className="absolute top-[0] left-[0%] z-0 h-[85px] w-[85px] rounded-[15%_50%_50%_50%] bg-ball-gradient from-secondary to-primary max-md:h-[45px] max-md:w-[45px]" />
           </form>
         </section>
       </div>
