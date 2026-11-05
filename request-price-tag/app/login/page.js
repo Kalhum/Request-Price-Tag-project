@@ -98,6 +98,7 @@ export default function LoginPage() {
             {/* Login Button */}
             <button
               type="submit"
+              path="/printing_request"
               className="btn-primary w-full text-body font-medium active:scale-[0.98]"
             >
               เข้าสู่ระบบ
