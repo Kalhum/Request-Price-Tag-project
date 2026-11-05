@@ -12,7 +12,7 @@ import {
 const menuItems = [
   {
     label: "home",
-    href: "/",
+    href: "/home",
     icon: House,
   },
   {
@@ -43,7 +43,7 @@ const menuItems = [
   },
 ];
 
-export default function Topbar() {
+export default function Navbar() {
   return (
     <nav className="   sticky top-0 z-50   flex min-h-[72px] shrink-0 items-center justify-center gap-2 border-b border-slate-200 bg-white px-layout shadow-card  ">
 

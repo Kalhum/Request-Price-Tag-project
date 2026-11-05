@@ -12,7 +12,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-export default function Navbar() {
+export default function Sidebar() {
   const router = useRouter();
 
   const handleLogout = () => {
